@@ -1,29 +1,29 @@
 package com.example.backend_sprint2.reponse;
 
 public class JwtRequest {
-    private String usersname;
-    private String passwords;
+    private String username;
+    private String password;
 
     public JwtRequest() {}
 
-    public JwtRequest(String usersname, String passwords) {
-        this.usersname = usersname;
-        this.passwords = passwords;
+    public JwtRequest(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
-    public String getUsersname() {
-        return usersname;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUsersname(String usersname) {
-        this.usersname = usersname;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getPasswords() {
-        return passwords;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswords(String passwords) {
-        this.passwords = passwords;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

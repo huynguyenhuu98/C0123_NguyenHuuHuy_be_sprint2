@@ -25,6 +25,12 @@ public class Carts {
         this.productRacing = productRacing;
     }
 
+    public Carts(Integer quantity, Customers customers, ProductRacing productRacing) {
+        this.quantity = quantity;
+        this.customers = customers;
+        this.productRacing = productRacing;
+    }
+
     public Long getId() {
         return id;
     }

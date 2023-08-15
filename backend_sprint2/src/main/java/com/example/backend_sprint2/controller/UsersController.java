@@ -28,7 +28,7 @@ public class UsersController {
     public ResponseEntity<?> loginAuthentication(@RequestBody JwtRequest authenticationRequest) throws Exception {
         try {
             Authentication authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(authenticationRequest.getUsersname(), authenticationRequest.getPasswords())
+                    new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
             );
             SecurityContextHolder.getContext().setAuthentication(authentication);
             JwtUserDetails principal = (JwtUserDetails) authentication.getPrincipal();

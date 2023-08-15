@@ -31,4 +31,9 @@ public class ProductRacingService implements IProductRacingService {
         }
         return new PageImpl<>(productRacingDTOS, pageable, productRacingPage.getTotalElements());
     }
+
+    @Override
+    public ProductRacing findById(Long id) {
+        return iProductRacingRepository.findById(id).get();
+    }
 }
