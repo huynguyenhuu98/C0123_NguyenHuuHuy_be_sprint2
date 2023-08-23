@@ -12,8 +12,9 @@ public interface ICartsService {
     void remove(Long id);
 
     List<Carts> findAll();
+    List<Carts> findAllByShopping(Long id);
 
-    Carts findByCustomersProduct(Customers customers, ProductRacing productFruit);
+    Carts findByCustomersProduct(Customers customers, ProductRacing productRacing);
 
     void setQuantityShoppingCart(Integer quantity, Long id);
 }

@@ -12,7 +12,7 @@ public class Carts {
     @JoinColumn(name = "id_customers")
     private Customers customers;
     @ManyToOne
-    @JoinColumn(name = "id_product_fruit")
+    @JoinColumn(name = "id_product_racing")
     private ProductRacing productRacing;
 
     public Carts() {

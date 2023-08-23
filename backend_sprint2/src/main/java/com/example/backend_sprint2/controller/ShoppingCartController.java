@@ -1,28 +1,16 @@
 package com.example.backend_sprint2.controller;
 
-
 import com.example.backend_sprint2.config.JwtTokenUtil;
-import com.example.backend_sprint2.config.JwtUserDetails;
-import com.example.backend_sprint2.dto.CustomersDTO;
-import com.example.backend_sprint2.dto.ProductRacingDTO;
 import com.example.backend_sprint2.model.Customers;
 import com.example.backend_sprint2.model.ProductRacing;
 import com.example.backend_sprint2.model.Carts;
-import com.example.backend_sprint2.model.Users;
 import com.example.backend_sprint2.service.ICustomersService;
 import com.example.backend_sprint2.service.IProductRacingService;
 import com.example.backend_sprint2.service.ICartsService;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
@@ -30,7 +18,6 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/api/shoppingCart")
-
 public class ShoppingCartController {
     @Autowired
     private ICartsService iCartsService;
@@ -38,7 +25,6 @@ public class ShoppingCartController {
     private IProductRacingService iProductRacingService;
     @Autowired
     private ICustomersService iCustomersService;
-
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 

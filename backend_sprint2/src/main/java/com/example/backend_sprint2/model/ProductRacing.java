@@ -22,6 +22,9 @@ public class ProductRacing {
     @ManyToOne
     @JoinColumn(name = "id_type")
     private ProductType productType;
+    @ManyToOne
+    @JoinColumn(name = "id_brand")
+    private Brands brands;
 
     public ProductRacing() {
     }
@@ -35,6 +38,18 @@ public class ProductRacing {
         this.images = images;
         this.createDate = createDate;
         this.productType = productType;
+    }
+
+    public ProductRacing(Long id, String nameRacing, Long price, String note, Integer quantity, String images, LocalDateTime createDate, ProductType productType, Brands brands) {
+        this.id = id;
+        this.nameRacing = nameRacing;
+        this.price = price;
+        this.note = note;
+        this.quantity = quantity;
+        this.images = images;
+        this.createDate = createDate;
+        this.productType = productType;
+        this.brands = brands;
     }
 
     public Long getId() {
@@ -99,5 +114,13 @@ public class ProductRacing {
 
     public void setImages(String images) {
         this.images = images;
+    }
+
+    public Brands getBrands() {
+        return brands;
+    }
+
+    public void setBrands(Brands brands) {
+        this.brands = brands;
     }
 }

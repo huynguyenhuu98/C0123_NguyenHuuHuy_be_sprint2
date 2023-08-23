@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductRacingService implements IProductRacingService {
@@ -35,5 +36,10 @@ public class ProductRacingService implements IProductRacingService {
     @Override
     public ProductRacing findById(Long id) {
         return iProductRacingRepository.findById(id).get();
+    }
+
+    @Override
+    public Optional<ProductRacing> findByIdProduct(Long id) {
+        return iProductRacingRepository.findById(id);
     }
 }

@@ -31,8 +31,13 @@ public class CartsService implements ICartsService {
     }
 
     @Override
+    public List<Carts> findAllByShopping(Long id) {
+        return iCartsRepository.findAllCustomers(id);
+    }
+
+    @Override
     public Carts findByCustomersProduct(Customers customers, ProductRacing product) {
-        return iCartsRepository.findByCustomerProduct(customers,product);
+        return iCartsRepository.findByCustomersAndProductRacing(customers,product);
     }
 
     @Override

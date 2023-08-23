@@ -24,6 +24,11 @@ public class Orders {
     public Orders() {
     }
 
+    public Orders(Long totalPrice, Customers customers) {
+        this.totalPrice = totalPrice;
+        this.customers = customers;
+    }
+
     public Orders(Long id, Long totalPrice, String codeOrders, Customers customers, LocalDateTime createDate) {
         this.id = id;
         this.totalPrice = totalPrice;
