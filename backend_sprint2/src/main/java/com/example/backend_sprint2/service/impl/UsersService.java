@@ -33,7 +33,6 @@ public class UsersService implements UserDetailsService {
         List<GrantedAuthority> authorities = new ArrayList<>();
         String role = users.getRoles().getRoleName();
         authorities.add(new SimpleGrantedAuthority(role));
-
         return new JwtUserDetails(users.getId(), users.getUserName(), users.getPass(), authorities);
     }
 

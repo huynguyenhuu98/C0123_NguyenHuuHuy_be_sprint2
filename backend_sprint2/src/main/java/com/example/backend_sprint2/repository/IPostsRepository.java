@@ -1,7 +1,6 @@
 package com.example.backend_sprint2.repository;
 
 import com.example.backend_sprint2.model.Posts;
-import com.example.backend_sprint2.model.ProductRacing;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

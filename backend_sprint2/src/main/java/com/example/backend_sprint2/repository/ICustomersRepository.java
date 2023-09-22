@@ -9,6 +9,6 @@ public interface ICustomersRepository extends JpaRepository<Customers,Long> {
     @Query(value = "SELECT * from customers as c\n" +
             "        INNER JOIN users u on u.id = c.users_id\n" +
             "         WHERE u.user_name=:name", nativeQuery = true)
-    Customers findUsers(@Param("name")String name);
+    Customers findUsersName(@Param("name")String name);
 
 }

@@ -14,6 +14,6 @@ public class CustomersService implements ICustomersService {
 
     @Override
     public Customers findUsersId(String username) {
-        return iCustomersRepository.findUsers(username);
+        return iCustomersRepository.findUsersName(username);
     }
 }
